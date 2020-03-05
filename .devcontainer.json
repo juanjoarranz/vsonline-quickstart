@@ -1,5 +1,6 @@
 {
     "name": "VS Online Quickstart Sample",
+    "forwardPorts": [4321, 5432],
     "extensions": [
         "dbaeumer.vscode-eslint"
     ]
