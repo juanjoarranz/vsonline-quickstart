@@ -13,10 +13,8 @@
         4321,
         5432
     ],
-    "appPort": [
-        4321,
-        5432
-    ],
+    // Open port 4321 by default
+    "appPort": "4321",
     "extensions": [
         "dbaeumer.vscode-eslint",
         "ms-vsonline.vsonline",
