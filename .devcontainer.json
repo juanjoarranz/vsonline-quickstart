@@ -1,7 +1,27 @@
 {
-    "name": "VS Online Quickstart Sample",
-    "forwardPorts": [4321, 5432],
+    "name": "VS Online (Linux Universal)",
+    "dockerFile": "Dockerfile",
+    "remoteUser": "vsonline",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/home/vsonline/workspace,type=bind,consistency=cached",
+    "workspaceFolder": "/home/vsonline/workspace",
+    "runArgs": [
+        "--cap-add=SYS_PTRACE",
+        "--security-opt",
+        "seccomp=unconfined"
+    ],
+    "forwardPorts": [
+        4321,
+        5432
+    ],
+    "appPort": [
+        4321,
+        5432
+    ],
     "extensions": [
-        "dbaeumer.vscode-eslint"
+        "dbaeumer.vscode-eslint",
+        "ms-vsonline.vsonline",
+        "GitHub.vscode-pull-request-github",
+        "MS-vsliveshare.vsliveshare",
+        "VisualStudioExptTeam.vscodeintellicode"
     ]
 }
